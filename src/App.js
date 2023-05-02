@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+import Intro from './components/Intro';
+import Navigation from './components/Navigation';
+import Map from './components/Map';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Intro />
+      <ContactSection />
+      <Map location={{ lat: 37.7749, lng: -122.4194 }} zoomLevel={10} />
+      <Footer />
     </div>
   );
 }
